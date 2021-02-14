@@ -36,3 +36,59 @@ body {
 .moving-text {
   font-size: 7.2rem;
 }
+
+/* ==============
+    Header
+  ============= */
+#header {
+  background: black;
+  color: white;
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      font-size: 3rem;
+      flex: 0.3;
+      margin: 0 16px 0 0;
+    }
+  }
+}
+
+/* ==============
+    Nav
+  ============= */
+#nav {
+  flex: 0.7;
+
+  .nav-list {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+
+    .nav-list-item {
+      font-size: 3rem;
+      width: 15%;
+
+      a {
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        padding: 8px 0;
+
+        &:visited {
+          color: white;
+        }
+
+        &:hover {
+          color: black;
+          background-color: white;
+        }
+      }
+    }
+  }
+}
