@@ -13,7 +13,7 @@ gulp.task('sass', function () {
   let styleScssFile = gulp.src('./scss/style.scss')
     .pipe(plumber())
     .pipe(sass({ outputStyle: 'expanded' }))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./css'));
 
   return merge(scssFiles, styleScssFile);
 });

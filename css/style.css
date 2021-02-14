@@ -1,0 +1,112 @@
+@charset "UTF-8";
+/*
+======================================================================
+Project Name    : Animation Showcase
+File Name       : style.scss
+Encoding        : UTF-8
+
+Copyright © 2020 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _variables.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+/** =========
+  Font
+========= **/
+/** =========
+  Colors
+========= **/
+/** =========
+  Size
+========= **/
+/** =========
+  Media Queries
+========= **/
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _mixin.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _variables.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+/** =========
+  Font
+========= **/
+/** =========
+  Colors
+========= **/
+/** =========
+  Size
+========= **/
+/** =========
+  Media Queries
+========= **/
+/* ==============
+    Link styles
+  ============= */
+/* ==============
+   Media queries
+  ============= */
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _keyframes_mixin.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 3rem;
+}
+
+.moving-text {
+  font-size: 7.2rem;
+}
