@@ -132,6 +132,11 @@ body {
   margin: 0 16px 0 0;
 }
 
+#header .container .logo a {
+  text-decoration: none;
+  color: white;
+}
+
 /* ==============
     Nav
   ============= */
@@ -146,6 +151,7 @@ body {
 }
 
 #nav .nav-list .nav-list-item {
+  position: relative;
   font-size: 3rem;
   width: 15%;
 }
@@ -166,4 +172,33 @@ body {
 #nav .nav-list .nav-list-item a:hover {
   color: black;
   background-color: white;
+}
+
+#nav .nav-list .nav-list-item:hover .dropdown {
+  visibility: visible;
+  display: block;
+}
+
+#nav .nav-list .nav-list-item .dropdown {
+  visibility: hidden;
+  display: none;
+  position: absolute;
+  transition: all 0.5s ease;
+  right: 0;
+  background-color: black;
+  min-width: 200px;
+}
+
+#nav .nav-list .nav-list-item .dropdown:hover {
+  visibility: visible;
+  display: block;
+}
+
+#nav .nav-list .nav-list-item .dropdown .dropdown-item {
+  font-size: 1.6rem;
+}
+
+#nav .nav-list .nav-list-item .dropdown .dropdown-item a:hover {
+  color: white;
+  background-color: gray;
 }

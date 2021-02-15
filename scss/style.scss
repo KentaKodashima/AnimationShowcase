@@ -53,6 +53,11 @@ body {
       font-size: 3rem;
       flex: 0.3;
       margin: 0 16px 0 0;
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
     }
   }
 }
@@ -69,6 +74,7 @@ body {
     margin: 0;
 
     .nav-list-item {
+      position: relative;
       font-size: 3rem;
       width: 15%;
 
@@ -87,6 +93,38 @@ body {
         &:hover {
           color: black;
           background-color: white;
+        }
+      }
+
+      &:hover {
+        .dropdown {
+          visibility: visible;
+          display: block;
+        }
+      }
+      .dropdown {
+        visibility: hidden;
+        display: none;
+        position: absolute;
+        transition: all 0.5s ease;
+        right: 0;
+        background-color: black;
+        min-width: 200px;
+
+        &:hover {
+          visibility: visible;
+          display: block;
+        }
+
+        .dropdown-item {
+          font-size: 1.6rem;
+
+          a {
+            &:hover {
+              color: white;
+              background-color: gray;
+            }
+          }
         }
       }
     }
