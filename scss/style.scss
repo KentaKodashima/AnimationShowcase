@@ -54,6 +54,11 @@ body {
       flex: 0.3;
       margin: 0 16px 0 0;
 
+      @include max-screen($breakpMobileLand-max) {
+        flex: 0.5;
+        font-size: 2rem;
+      }
+
       a {
         text-decoration: none;
         color: white;
@@ -65,68 +70,4 @@ body {
 /* ==============
     Nav
   ============= */
-#nav {
-  flex: 0.7;
-
-  .nav-list {
-    display: flex;
-    justify-content: flex-end;
-    margin: 0;
-
-    .nav-list-item {
-      position: relative;
-      font-size: 3rem;
-      width: 15%;
-
-      a {
-        display: block;
-        width: 100%;
-        text-decoration: none;
-        color: white;
-        text-align: center;
-        padding: 8px 0;
-
-        &:visited {
-          color: white;
-        }
-
-        &:hover {
-          color: black;
-          background-color: white;
-        }
-      }
-
-      &:hover {
-        .dropdown {
-          visibility: visible;
-          display: block;
-        }
-      }
-      .dropdown {
-        visibility: hidden;
-        display: none;
-        position: absolute;
-        transition: all 0.5s ease;
-        right: 0;
-        background-color: black;
-        min-width: 200px;
-
-        &:hover {
-          visibility: visible;
-          display: block;
-        }
-
-        .dropdown-item {
-          font-size: 1.6rem;
-
-          a {
-            &:hover {
-              color: white;
-              background-color: gray;
-            }
-          }
-        }
-      }
-    }
-  }
-}
+@import "nav";

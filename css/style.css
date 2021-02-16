@@ -132,6 +132,13 @@ body {
   margin: 0 16px 0 0;
 }
 
+@media screen and (max-width: 600px) {
+  #header .container .logo {
+    flex: 0.5;
+    font-size: 2rem;
+  }
+}
+
 #header .container .logo a {
   text-decoration: none;
   color: white;
@@ -144,10 +151,82 @@ body {
   flex: 0.7;
 }
 
+@media screen and (max-width: 600px) {
+  #nav {
+    display: flex;
+    flex: 0.5;
+    justify-content: flex-end;
+  }
+}
+
+#nav .menu-button {
+  height: 30px;
+  padding: 25px 15px;
+  background-color: black;
+  border: 1px solid gray;
+}
+
+@media screen and (min-width: 600px) {
+  #nav .menu-button {
+    display: none !important;
+  }
+}
+
+#nav .menu-button .menu-bar {
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: #E1E2E7;
+  top: 0;
+  position: relative;
+}
+
+#nav .menu-button .menu-bar:before {
+  content: "";
+  position: absolute;
+  transition: all 100ms ease;
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: #E1E2E7;
+  top: -10px;
+}
+
+#nav .menu-button .menu-bar:after {
+  content: "";
+  position: absolute;
+  transition: all 100ms ease;
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: #E1E2E7;
+  top: 10px;
+}
+
+#nav.is-open .menu-button .menu-bar {
+  background-color: transparent;
+}
+
+#nav.is-open .menu-button .menu-bar:before {
+  transform: rotate(45deg) translate(7px, 7px);
+  transition: all 100ms ease;
+}
+
+#nav.is-open .menu-button .menu-bar:after {
+  transform: rotate(-45deg) translate(7px, -7px);
+  transition: all 100ms ease;
+}
+
 #nav .nav-list {
   display: flex;
   justify-content: flex-end;
   margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+  #nav .nav-list {
+    display: none !important;
+  }
 }
 
 #nav .nav-list .nav-list-item {
