@@ -8,7 +8,9 @@
   
 // })
 
-// Navigation toggle
+/**
+ * Hamburger menu toggle
+*/
 let navElement = document.getElementById('nav')
 let hamburgerButton = document.getElementsByClassName('menu-button')[0]
 
@@ -16,7 +18,29 @@ hamburgerButton.addEventListener('click', function() {
   navElement.classList.toggle('is-open')
 })
 
-// Scroll animations
+
+/**
+ * Detect clicks on mobile menu
+*/
+let navListMobile = document.getElementsByClassName('nav-list-mobile')[0]
+
+// IE does not know about the target attribute. It looks for srcElement
+// This function will get the event target in a browser-compatible way
+function getEventTarget(e) {
+  e = e || window.event
+  return e.target || e.srcElement
+}
+
+navListMobile.onclick = function(event) {
+  console.log(event, 'raw event')
+  const target = getEventTarget(event)
+  target.classList.toggle('is-open')
+}
+
+
+/**
+ * Scroll animations
+*/
 let textPath = document.querySelector('#text-path')
 let path = document.querySelector(textPath.getAttribute('href'))
 let pathLength = path.getTotalLength()

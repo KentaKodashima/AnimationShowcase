@@ -43,31 +43,14 @@ body {
 #header {
   background: black;
   color: white;
-  .container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-
-    .logo {
-      font-size: 3rem;
-      flex: 0.3;
-      margin: 0 16px 0 0;
-
-      @include max-screen($breakpMobileLand-max) {
-        flex: 0.5;
-        font-size: 2rem;
-      }
-
-      a {
-        text-decoration: none;
-        color: white;
-      }
-    }
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 /* ==============
     Nav
   ============= */
 @import "nav";
+
