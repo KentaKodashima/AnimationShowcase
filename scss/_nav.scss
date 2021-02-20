@@ -4,6 +4,11 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  overflow: hidden;
+
+  @include max-screen($breakpMobileLand-max) {
+    padding: 8px 0;
+  }
 
   .logo {
     font-size: 3rem;
@@ -47,24 +52,12 @@
         &:visited {
           color: white;
         }
-
-        &:hover {
-          color: black;
-          background-color: white;
-        }
       }
 
-      &:hover {
-        .dropdown {
-          visibility: visible;
-          display: block;
-        }
-      }
       .dropdown {
         visibility: hidden;
         display: none;
         position: absolute;
-        transition: all 0.5s ease;
         right: 0;
         background-color: black;
         min-width: 200px;
@@ -83,6 +76,18 @@
               background-color: gray;
             }
           }
+        }
+      }
+
+      &:hover {
+        .dropdown {
+          visibility: visible;
+          display: block;
+        }
+
+        > a {
+          color: black;
+          background-color: white;
         }
       }
     }
@@ -122,13 +127,80 @@
 
   .nav-list-mobile {
     display: none;
+    height: 0;
     width: 100%;
+    font-size: 1.8rem;
+    margin: 2em 0;
     transition: all 100ms ease;
 
-    .nav-list-item {
+    .nav-list-item-mobile {
+      margin-bottom: 1em;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+
       a {
+        display: block;
         text-decoration: none;
         color: white;
+      }
+
+      .menu-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid gray;
+        padding: 8px 0;
+
+        .plus-bar {
+          display: inline-block;
+          position: relative;
+          width: 12px;
+          height: 2px;
+          margin-right: 4px;
+          background-color: white;
+
+          &:before {
+            content: "";
+            position: absolute;
+            transition: all 100ms ease;
+            transform: rotate(90deg);
+            display: inline-block;
+            width: 12px;
+            height: 2px;
+            margin-right: 4px;
+            background-color: white;
+          }
+        }
+      }
+
+      .dropdown {
+        display: none;
+        font-size: 1.4rem;
+        padding-left: 1em;
+
+        .dropdown-item {
+          padding-top: 8px;
+          padding-bottom: 8px;
+          margin-bottom: 8px;
+          border-bottom: 1px solid gray;
+        }
+      }
+
+      &.is-opened {
+        .dropdown {
+          display: block;
+        }
+
+        .menu-title {
+          .plus-bar {
+            &:before {
+              transform: rotate(0deg);
+              transition: all 100ms ease;
+            }
+          }
+        }
       }
     }
 
@@ -137,7 +209,7 @@
     }
   }
 
-  &.is-open {
+  &.is-opened {
     .menu-button {
       .menu-bar {
         background-color: transparent;
@@ -156,6 +228,7 @@
 
     .nav-list-mobile {
       display: block;
+      height: auto;
     }
   }
 

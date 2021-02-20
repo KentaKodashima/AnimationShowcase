@@ -15,27 +15,18 @@ let navElement = document.getElementById('nav')
 let hamburgerButton = document.getElementsByClassName('menu-button')[0]
 
 hamburgerButton.addEventListener('click', function() {
-  navElement.classList.toggle('is-open')
+  navElement.classList.toggle('is-opened')
 })
 
 
 /**
  * Detect clicks on mobile menu
 */
-let navListMobile = document.getElementsByClassName('nav-list-mobile')[0]
-
-// IE does not know about the target attribute. It looks for srcElement
-// This function will get the event target in a browser-compatible way
-function getEventTarget(e) {
-  e = e || window.event
-  return e.target || e.srcElement
-}
-
-navListMobile.onclick = function(event) {
-  console.log(event, 'raw event')
-  const target = getEventTarget(event)
-  target.classList.toggle('is-open')
-}
+document.querySelectorAll('.nav-list-item-mobile').forEach(listItem => {
+  listItem.addEventListener('click', e => {
+    listItem.classList.toggle('is-opened')
+  })
+})
 
 
 /**
