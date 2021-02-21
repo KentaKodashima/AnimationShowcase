@@ -4,7 +4,6 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  overflow: hidden;
 
   @include max-screen($breakpMobileLand-max) {
     padding: 8px 0;
@@ -55,17 +54,11 @@
       }
 
       .dropdown {
-        visibility: hidden;
         display: none;
         position: absolute;
         right: 0;
         background-color: black;
         min-width: 200px;
-
-        &:hover {
-          visibility: visible;
-          display: block;
-        }
 
         .dropdown-item {
           font-size: 1.6rem;
@@ -81,7 +74,6 @@
 
       &:hover {
         .dropdown {
-          visibility: visible;
           display: block;
         }
 
@@ -126,11 +118,13 @@
   }
 
   .nav-list-mobile {
-    display: none;
-    height: 0;
+    visibility: hidden;
     width: 100%;
     font-size: 1.8rem;
-    margin: 2em 0;
+    height: 0;
+    transform: scaleY(0);
+    transform-origin:top;
+    margin: 0;
     transition: all 100ms ease;
 
     .nav-list-item-mobile {
@@ -176,9 +170,13 @@
       }
 
       .dropdown {
-        display: none;
+        visibility: hidden;
+        height: 0;
+        transform: scaleY(0);
+        transform-origin: top;
         font-size: 1.4rem;
         padding-left: 1em;
+        transition: all 100ms ease;
 
         .dropdown-item {
           padding-top: 8px;
@@ -190,7 +188,9 @@
 
       &.is-opened {
         .dropdown {
-          display: block;
+          visibility: visible;
+          height: auto;
+          transform: scaleY(1);
         }
 
         .menu-title {
@@ -227,8 +227,10 @@
     }
 
     .nav-list-mobile {
-      display: block;
+      visibility: visible;
       height: auto;
+      transform: scaleY(1);
+      margin: 2em 0;
     }
   }
 
