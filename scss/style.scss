@@ -28,11 +28,17 @@ body {
   padding: 90px 0;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 /* ==============
     Common parts
   ============= */
 @import "common/container";
 @import "common/section-title";
+@import "common/page-title";
 
 .moving-text {
   font-size: 7.2rem;
@@ -52,3 +58,13 @@ body {
     Footer
   ============= */
 @import "structure/footer";
+
+/* ==============
+    Top page
+  ============= */
+@import "top/top";
+
+/* ==============
+    CSS Hover Effects page
+  ============= */
+  @import "css-hover/index";

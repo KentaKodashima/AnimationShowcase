@@ -102,6 +102,11 @@ body {
   padding: 90px 0;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 /* ==============
     Common parts
   ============= */
@@ -112,6 +117,34 @@ body {
 
 .section-title {
   font-size: 3rem;
+}
+
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _variables.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+/** =========
+  Font
+========= **/
+/** =========
+  Colors
+========= **/
+/** =========
+  Size
+========= **/
+/** =========
+  Media Queries
+========= **/
+.page-title {
+  font-size: 3.5rem;
 }
 
 .moving-text {
@@ -128,6 +161,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 100;
 }
 
 /* ==============
@@ -383,4 +417,180 @@ body {
   ============= */
 #footer .copyright {
   text-align: center;
+}
+
+/* ==============
+    Top page
+  ============= */
+.hero-title {
+  text-align: center;
+}
+
+/* ==============
+    CSS Hover Effects page
+  ============= */
+#another-view-on-top .list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#another-view-on-top .list .list-item {
+  width: 30%;
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+#another-view-on-top .list .list-item:last-child {
+  margin-bottom: 0;
+}
+
+#another-view-on-top .list .list-item .img-box {
+  width: 100%;
+  margin: 0;
+  position: relative;
+}
+
+@media screen and (max-width: 600px) {
+  #another-view-on-top .list .list-item .img-box {
+    margin: 0;
+  }
+}
+
+#another-view-on-top .list .list-item .img-box .img-box-link::after, #another-view-on-top .list .list-item .img-box .img-box-link::before, #another-view-on-top .list .list-item .img-box .mask::after, #another-view-on-top .list .list-item .img-box .mask::before {
+  background-color: #1DA9A2;
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 10;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+}
+
+@media screen and (max-width: 600px) {
+  #another-view-on-top .list .list-item .img-box .img-box-link::after, #another-view-on-top .list .list-item .img-box .img-box-link::before, #another-view-on-top .list .list-item .img-box .mask::after, #another-view-on-top .list .list-item .img-box .mask::before {
+    transition: none;
+    -webkit-transition: none;
+  }
+}
+
+#another-view-on-top .list .list-item .img-box .img-box-link {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  color: #1DA9A2;
+}
+
+#another-view-on-top .list .list-item .img-box .img-box-link:hover .mask::before, #another-view-on-top .list .list-item .img-box .img-box-link:hover .mask::after {
+  height: 100%;
+  height: calc(100% + 1px);
+}
+
+#another-view-on-top .list .list-item .img-box .img-box-link:hover *::-ms-backdrop, #another-view-on-top .list .list-item .img-box .img-box-link:hover .mask::before, #another-view-on-top .list .list-item .img-box .img-box-link:hover .mask::after {
+  height: 100%;
+}
+
+#another-view-on-top .list .list-item .img-box .img-box-link:hover::after, #another-view-on-top .list .list-item .img-box .img-box-link:hover::before {
+  width: 100%;
+  width: calc(100% + 1px);
+}
+
+#another-view-on-top .list .list-item .img-box .img-box-link:hover *::-ms-backdrop, #another-view-on-top .list .list-item .img-box .img-box-link:hover::after, #another-view-on-top .list .list-item .img-box .img-box-link:hover::before {
+  width: 100%;
+}
+
+#another-view-on-top .list .list-item .img-box .img-box-link::before {
+  bottom: -1px;
+  height: 20px;
+  right: -1px;
+  width: 0px;
+}
+
+#another-view-on-top .list .list-item .img-box .img-box-link::after {
+  height: 20px;
+  left: -1px;
+  top: -1px;
+  width: 0px;
+}
+
+#another-view-on-top .list .list-item .img-box .img-box-link .mask {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all 0.2s ease;
+}
+
+#another-view-on-top .list .list-item .img-box .img-box-link .mask::before {
+  height: 0px;
+  right: -1px;
+  top: -1px;
+  width: 20px;
+}
+
+#another-view-on-top .list .list-item .img-box .img-box-link .mask::after {
+  bottom: -1px;
+  height: 0px;
+  left: -1px;
+  width: 20px;
+}
+
+#another-view-on-top .list .list-item .img-box .img-box-link .mask .mask-container {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+#another-view-on-top .list .list-item .img-box .img-box-link .mask .mask-container .caption-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#another-view-on-top .list .list-item .img-box .img-box-link .mask .mask-container .caption-detail {
+  font-size: 1.5rem;
+}
+
+#another-view-on-top .list .list-item .img-box .img-box-link .mask .mask-container .mask-button {
+  width: 60%;
+  margin: 0 auto;
+  padding: 8px 0;
+  border: solid 2px #1DA9A2;
+}
+
+#another-view-on-top .list .list-item .img-box .img-box-link .mask .mask-container .mask-button:hover {
+  transition: all 0.5s;
+  color: #fff;
+  background-color: #1DA9A2;
+}
+
+#another-view-on-top .list .list-item .img-box .img-box-link img {
+  width: 100%;
+}
+
+#another-view-on-top .list .list-item .img-box .img-box-link:hover .mask {
+  opacity: 1;
+}
+
+#another-view-on-top .list .list-item .img-box .caption-info {
+  text-align: center;
+  margin-top: 8px;
+}
+
+#another-view-on-top .list .list-item .img-box .caption-info .caption-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 1em 0 0 0;
+}
+
+#another-view-on-top .list .list-item .img-box .caption-info .caption-detail {
+  font-size: 1.6rem;
+  margin: 0;
 }
