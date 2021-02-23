@@ -102,6 +102,9 @@ body {
   padding: 90px 0;
 }
 
+/* ==============
+    Common parts
+  ============= */
 .container {
   width: 80%;
   margin: 0 auto;
@@ -373,4 +376,11 @@ body {
   height: auto;
   transform: scaleY(1);
   margin: 2em 0;
+}
+
+/* ==============
+    Footer
+  ============= */
+#footer .copyright {
+  text-align: center;
 }

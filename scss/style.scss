@@ -11,9 +11,9 @@ reproduced or used in any manner whatsoever.
 ======================================================================
 */
 
-@import "variables";
-@import "mixin";
-@import "keyframes_mixin";
+@import "utils/variables";
+@import "utils/mixin";
+@import "utils/keyframes_mixin";
 
 html {
   font-family: Arial, Helvetica, sans-serif;
@@ -28,14 +28,11 @@ body {
   padding: 90px 0;
 }
 
-.container {
-  width: 80%;
-  margin: 0 auto;
-}
-
-.section-title {
-  font-size: $fontSizeSectionTitle;
-}
+/* ==============
+    Common parts
+  ============= */
+@import "common/container";
+@import "common/section-title";
 
 .moving-text {
   font-size: 7.2rem;
@@ -44,17 +41,14 @@ body {
 /* ==============
     Header
   ============= */
-#header {
-  background: black;
-  color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-}
+@import "structure/header";
 
 /* ==============
     Nav
   ============= */
-@import "nav";
+@import "structure/nav";
 
+/* ==============
+    Footer
+  ============= */
+@import "structure/footer";
