@@ -147,6 +147,25 @@ reproduced or used in any manner whatsoever.
   font-size: 3.5rem;
 }
 
+.codepen-button a {
+  display: block;
+  width: 200px;
+  margin: auto;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 16px;
+  font-size: 2rem;
+  background-color: #000;
+}
+
+.codepen-button a:hover {
+  transition: all 0.5s;
+  color: #fff;
+  background-color: gray;
+}
+
 .moving-text {
   font-size: 7.2rem;
 }
@@ -155,8 +174,8 @@ reproduced or used in any manner whatsoever.
     Header
   ============= */
 #header {
-  background: black;
-  color: white;
+  background: #000;
+  color: #fff;
   position: fixed;
   top: 0;
   left: 0;
@@ -196,7 +215,7 @@ reproduced or used in any manner whatsoever.
 
 #nav .logo a {
   text-decoration: none;
-  color: white;
+  color: #fff;
 }
 
 #nav .nav-list {
@@ -222,20 +241,20 @@ reproduced or used in any manner whatsoever.
   display: block;
   width: 100%;
   text-decoration: none;
-  color: white;
+  color: #fff;
   text-align: center;
   padding: 8px 0;
 }
 
 #nav .nav-list .nav-list-item a:visited {
-  color: white;
+  color: #fff;
 }
 
 #nav .nav-list .nav-list-item .dropdown {
   display: none;
   position: absolute;
   right: 0;
-  background-color: black;
+  background-color: #000;
   min-width: 200px;
 }
 
@@ -244,7 +263,7 @@ reproduced or used in any manner whatsoever.
 }
 
 #nav .nav-list .nav-list-item .dropdown .dropdown-item a:hover {
-  color: white;
+  color: #fff;
   background-color: gray;
 }
 
@@ -253,8 +272,8 @@ reproduced or used in any manner whatsoever.
 }
 
 #nav .nav-list .nav-list-item:hover > a {
-  color: black;
-  background-color: white;
+  color: #000;
+  background-color: #fff;
 }
 
 #nav .menu-button {
@@ -262,7 +281,7 @@ reproduced or used in any manner whatsoever.
   margin: 0 0 0 auto;
   height: 30px;
   padding: 25px 15px;
-  background-color: black;
+  background-color: #000;
   border: 1px solid gray;
 }
 
@@ -325,7 +344,7 @@ reproduced or used in any manner whatsoever.
 #nav .nav-list-mobile .nav-list-item-mobile a {
   display: block;
   text-decoration: none;
-  color: white;
+  color: #fff;
 }
 
 #nav .nav-list-mobile .nav-list-item-mobile .menu-title {
@@ -342,7 +361,7 @@ reproduced or used in any manner whatsoever.
   width: 12px;
   height: 2px;
   margin-right: 4px;
-  background-color: white;
+  background-color: #fff;
 }
 
 #nav .nav-list-mobile .nav-list-item-mobile .menu-title .plus-bar:before {
@@ -354,7 +373,7 @@ reproduced or used in any manner whatsoever.
   width: 12px;
   height: 2px;
   margin-right: 4px;
-  background-color: white;
+  background-color: #fff;
 }
 
 #nav .nav-list-mobile .nav-list-item-mobile .dropdown {

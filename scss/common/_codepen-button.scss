@@ -1,0 +1,20 @@
+.codepen-button {
+  a {
+    display: block;
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    color: $colorWhite;
+    font-weight: bold;
+    padding: 8px 16px;
+    font-size: 2rem;
+    background-color: $colorBlack;
+
+    &:hover {
+      transition: all 0.5s;
+      color: $colorWhite;
+      background-color: $colorGray;
+    }
+  }
+}

@@ -21,7 +21,7 @@
 
     a {
       text-decoration: none;
-      color: white;
+      color: $colorWhite;
     }
   }
 
@@ -44,12 +44,12 @@
         display: block;
         width: 100%;
         text-decoration: none;
-        color: white;
+        color: $colorWhite;
         text-align: center;
         padding: 8px 0;
 
         &:visited {
-          color: white;
+          color: $colorWhite;
         }
       }
 
@@ -57,7 +57,7 @@
         display: none;
         position: absolute;
         right: 0;
-        background-color: black;
+        background-color: $colorBlack;
         min-width: 200px;
 
         .dropdown-item {
@@ -65,8 +65,8 @@
 
           a {
             &:hover {
-              color: white;
-              background-color: gray;
+              color: $colorWhite;
+              background-color: $colorGray;
             }
           }
         }
@@ -78,8 +78,8 @@
         }
 
         > a {
-          color: black;
-          background-color: white;
+          color: $colorBlack;
+          background-color: $colorWhite;
         }
       }
     }
@@ -90,8 +90,8 @@
     margin: 0 0 0 auto; // Align the button to the right
     height: 30px;
     padding: 25px 15px;
-    background-color: black;
-    border: 1px solid gray;
+    background-color: $colorBlack;
+    border: 1px solid $colorGray;
 
     @include min-screen($breakpMobileLand-max) {
       display: none !important;
@@ -137,14 +137,14 @@
       a {
         display: block;
         text-decoration: none;
-        color: white;
+        color: $colorWhite;
       }
 
       .menu-title {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 1px solid gray;
+        border-bottom: 1px solid $colorGray;
         padding: 8px 0;
 
         .plus-bar {
@@ -153,7 +153,7 @@
           width: 12px;
           height: 2px;
           margin-right: 4px;
-          background-color: white;
+          background-color: $colorWhite;
 
           &:before {
             content: "";
@@ -164,7 +164,7 @@
             width: 12px;
             height: 2px;
             margin-right: 4px;
-            background-color: white;
+            background-color: $colorWhite;
           }
         }
       }
@@ -182,7 +182,7 @@
           padding-top: 8px;
           padding-bottom: 8px;
           margin-bottom: 8px;
-          border-bottom: 1px solid gray;
+          border-bottom: 1px solid $colorGray;
         }
       }
 

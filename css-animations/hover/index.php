@@ -56,6 +56,11 @@
           </figure>
         </li>
       </ul>
+      <div class="codepen-button">
+        <a href="https://codepen.io/KentaKodashima/pen/PobEjQx">
+          View on CodePen
+        </a>
+      </div>
     </div>
   </section>
 </main>
