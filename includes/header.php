@@ -11,6 +11,7 @@
   <!-- <script src="./js/function.js"></script> -->
 </head>
 <body>
+  <?php include($_SERVER['DOCUMENT_ROOT'].'/includes/nav-items.php'); ?>
   <header id="header">
     <div class="container">
       <nav id="nav">
@@ -21,41 +22,32 @@
         </button>
 
         <ul class="nav-list-mobile">
-          <li class="nav-list-item-mobile">
-            <div class="menu-title">
-              <a href="#">JS</a>
-              <span class='plus-bar'></span>
-            </div>
-            <ul class="dropdown">
-              <li class="dropdown-item"><a href="/js-animations/scroll/">Scroll animations</a></li>
-            </ul>
-          </li>
-          <li class="nav-list-item-mobile">
-            <div class="menu-title">
-              <a href="#">CSS</a>
-              <span class='plus-bar'></span>
-            </div>
-            <ul class="dropdown">
-              <li class="dropdown-item"><a href="/css-animations/scroll/">Scroll animations</a></li>
-              <li class="dropdown-item"><a href="/css-animations/hover/">Hover Effects</a></li>
-            </ul>
-          </li>
+          <?php foreach ($mainNavItems as $item) : ?>
+            <li class="nav-list-item-mobile">
+              <div class="menu-title">
+                <?php echo "<a href=\"{$item->slug}\">{$item->title}</a>" ?>
+                <span class='plus-bar'></span>
+              </div>
+              <ul class="dropdown">
+                <?php foreach ($item->subItems as $menu) : ?>
+                  <?php echo "<li class=\"dropdown-item\"><a href=\"{$menu['slug']}\">{$menu['title']}</a></li>"; ?>
+                <?php endforeach ?>
+              </ul>
+            </li>
+          <?php endforeach ?>
         </ul>
 
         <ul class="nav-list">
-          <li class="nav-list-item">
-            <a href="">JS</a>
-            <ul class="dropdown">
-              <li class="dropdown-item"><a href="/js-animations/scroll/">Scroll animations</a></li>
-            </ul>
-          </li>
-          <li class="nav-list-item">
-            <a href="">CSS</a>
-            <ul class="dropdown">
-              <li class="dropdown-item"><a href="/css-animations/scroll/">Scroll animations</a></li>
-              <li class="dropdown-item"><a href="/css-animations/hover/">Hover Effects</a></li>
-            </ul>
-          </li>
+          <?php foreach ($mainNavItems as $item) : ?>
+            <li class="nav-list-item">
+              <?php echo "<a href=\"{$item->slug}\">{$item->title}</a>"; ?>
+              <ul class="dropdown">
+                <?php foreach ($item->subItems as $menu) : ?>
+                  <?php echo "<li class=\"dropdown-item\"><a href=\"{$menu['slug']}\">{$menu['title']}</a></li>"; ?>
+                <?php endforeach ?>
+              </ul>
+            </li>
+          <?php endforeach ?>
         </ul>
       </nav>
     </div>

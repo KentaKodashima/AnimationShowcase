@@ -38,7 +38,6 @@
     .nav-list-item {
       position: relative;
       font-size: 3rem;
-      width: 15%;
 
       a {
         display: block;
@@ -46,7 +45,7 @@
         text-decoration: none;
         color: $colorWhite;
         text-align: center;
-        padding: 8px 0;
+        padding: 8px 20px;
 
         &:visited {
           color: $colorWhite;

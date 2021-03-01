@@ -2,7 +2,7 @@
   <main id="main">
     <section>
       <div class="container">
-        <h2 class="hero-title">The place where cool animations gether</h2>
+        <h2 class="hero-title">The collection of good old HTML/CSS animations</h2>
       </div>
     </section>
   </main>
