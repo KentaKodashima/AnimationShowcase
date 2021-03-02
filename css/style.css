@@ -445,7 +445,7 @@ reproduced or used in any manner whatsoever.
 }
 
 /* ==============
-    CSS Hover Effects page
+    CSS Hover effects page
   ============= */
 #another-view-on-top .list {
   display: flex;
@@ -611,4 +611,73 @@ reproduced or used in any manner whatsoever.
 #another-view-on-top .list .list-item .img-box .caption-info .caption-detail {
   font-size: 1.6rem;
   margin: 0;
+}
+
+/* ==============
+    JS + CSS buttons paeg
+  ============= */
+#hamburger-buttons .hamburger-button-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#hamburger-buttons .hamburger-button-list .humburger-to-cross .content {
+  margin-bottom: 16px;
+}
+
+#hamburger-buttons .hamburger-button-list .humburger-to-cross .content .menu-button {
+  display: block;
+  margin: 0 auto;
+  height: 30px;
+  padding: 25px 15px;
+  background-color: #000;
+  border: 1px solid gray;
+}
+
+#hamburger-buttons .hamburger-button-list .humburger-to-cross .content .menu-button .menu-bar {
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: #E1E2E7;
+  top: 0;
+  position: relative;
+}
+
+#hamburger-buttons .hamburger-button-list .humburger-to-cross .content .menu-button .menu-bar:before {
+  content: "";
+  position: absolute;
+  transition: all 100ms ease;
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: #E1E2E7;
+  top: -10px;
+}
+
+#hamburger-buttons .hamburger-button-list .humburger-to-cross .content .menu-button .menu-bar:after {
+  content: "";
+  position: absolute;
+  transition: all 100ms ease;
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: #E1E2E7;
+  top: 10px;
+}
+
+#hamburger-buttons .hamburger-button-list .humburger-to-cross.is-opened .menu-button .menu-bar {
+  background-color: transparent;
+}
+
+#hamburger-buttons .hamburger-button-list .humburger-to-cross.is-opened .menu-button .menu-bar:before {
+  transform: rotate(45deg) translate(7px, 7px);
+  transition: all 100ms ease;
+}
+
+#hamburger-buttons .hamburger-button-list .humburger-to-cross.is-opened .menu-button .menu-bar:after {
+  transform: rotate(-45deg) translate(7px, -7px);
+  transition: all 100ms ease;
 }

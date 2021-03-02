@@ -9,29 +9,46 @@
 // })
 
 /**
- * Hamburger menu toggle
+ * Nav animations
 */
+// Hamburger menu toggle
 let navElement = document.getElementById('nav')
-let hamburgerButton = document.getElementsByClassName('menu-button')[0]
+let hamburgerButton = document.getElementById('nav').getElementsByClassName('menu-button')[0]
 
 hamburgerButton.addEventListener('click', function() {
   navElement.classList.toggle('is-opened')
 })
 
-
-/**
- * Detect clicks on mobile menu
-*/
+// Detect clicks on mobile menu
 document.querySelectorAll('.nav-list-item-mobile').forEach(listItem => {
   listItem.addEventListener('click', e => {
     listItem.classList.toggle('is-opened')
   })
 })
+/**
+ * ===== Nav animations end =====
+*/
 
 
 /**
- * Scroll animations
+ * JS + CSS page
 */
+// Hamburger buttons toggling
+let humburgerToCrossBlock = document.getElementById('hamburger-buttons').getElementsByClassName('humburger-to-cross')[0]
+let hamburgerToCross = document.getElementById('hamburger-buttons').getElementsByClassName('menu-button')[0]
+
+hamburgerToCross.addEventListener('click', function() {
+  humburgerToCrossBlock.classList.toggle('is-opened')
+})
+/**
+ * =====  JS + CSS page end =====
+*/
+
+
+/**
+ * JS page
+*/
+// Scroll animations
 let textPath = document.querySelector('#text-path')
 let path = document.querySelector(textPath.getAttribute('href'))
 let pathLength = path.getTotalLength()
@@ -51,3 +68,6 @@ function onScroll() {
   })
 }
 window.addEventListener('scroll', onScroll)
+/**
+ * ===== JS page end =====
+*/

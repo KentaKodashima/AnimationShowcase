@@ -29,8 +29,12 @@
       "title" => 'JS + CSS',
       "subItems" => array (
         array(
-          "slug" => '/js-css-animations/navigation/',
-          "title" => 'Navigation'
+          "slug" => '/js-css-animations/navigations/',
+          "title" => 'Navigations'
+        ),
+        array(
+          "slug" => '/js-css-animations/buttons/',
+          "title" => 'Buttons'
         )
       )
     ),
