@@ -45,4 +45,7 @@
     </div>
   </section>
 </main>
-<?php include($_SERVER['DOCUMENT_ROOT'].'/includes/footer.php') ?>
+<?php
+  $load_script = true;
+  include($_SERVER['DOCUMENT_ROOT'].'/includes/footer.php')
+?>
