@@ -11,7 +11,7 @@
               <span class='menu-bar'></span>
             </button>
           </div>
-          <div class="codepen-button">
+          <div class="codepen-button bottom">
             <a href="https://codepen.io/KentaKodashima/pen/QWWBEpM">
               View on CodePen
             </a>

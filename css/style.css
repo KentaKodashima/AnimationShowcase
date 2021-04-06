@@ -166,6 +166,14 @@ reproduced or used in any manner whatsoever.
   background-color: gray;
 }
 
+.codepen-button.top {
+  margin-bottom: 16px;
+}
+
+.codepen-button.bottom {
+  margin-top: 16px;
+}
+
 .moving-text {
   font-size: 7.2rem;
 }
@@ -624,10 +632,6 @@ reproduced or used in any manner whatsoever.
   flex-wrap: wrap;
 }
 
-#hamburger-buttons .hamburger-button-list .humburger-to-cross .content {
-  margin-bottom: 16px;
-}
-
 #hamburger-buttons .hamburger-button-list .humburger-to-cross .content .menu-button {
   display: block;
   margin: 0 auto;
@@ -680,4 +684,257 @@ reproduced or used in any manner whatsoever.
 #hamburger-buttons .hamburger-button-list .humburger-to-cross.is-opened .menu-button .menu-bar:after {
   transform: rotate(-45deg) translate(7px, -7px);
   transition: all 100ms ease;
+}
+
+.nav-container {
+  width: 80%;
+  margin: auto;
+}
+
+#dropdown-on-hover-header {
+  background-color: gray;
+}
+
+#dropdown-on-hover-header .nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 600px) {
+  #dropdown-on-hover-header .nav {
+    padding: 8px 0;
+  }
+}
+
+#dropdown-on-hover-header .nav .logo {
+  font-size: 2rem;
+  flex: 0.3;
+  margin: 0 16px 0 0;
+}
+
+@media screen and (max-width: 600px) {
+  #dropdown-on-hover-header .nav .logo {
+    flex: 0.5;
+    font-size: 1.5rem;
+  }
+}
+
+#dropdown-on-hover-header .nav .logo a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#dropdown-on-hover-header .nav .nav-list {
+  flex: 0.7;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+  #dropdown-on-hover-header .nav .nav-list {
+    display: none !important;
+  }
+}
+
+#dropdown-on-hover-header .nav .nav-list .nav-list-item {
+  position: relative;
+  font-size: 3rem;
+}
+
+#dropdown-on-hover-header .nav .nav-list .nav-list-item a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  padding: 8px 20px;
+}
+
+#dropdown-on-hover-header .nav .nav-list .nav-list-item a:visited {
+  color: #fff;
+}
+
+#dropdown-on-hover-header .nav .nav-list .nav-list-item .dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: gray;
+  min-width: 200px;
+}
+
+#dropdown-on-hover-header .nav .nav-list .nav-list-item .dropdown .dropdown-item {
+  font-size: 1.6rem;
+}
+
+#dropdown-on-hover-header .nav .nav-list .nav-list-item .dropdown .dropdown-item a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+#dropdown-on-hover-header .nav .nav-list .nav-list-item:hover .dropdown {
+  display: block;
+}
+
+#dropdown-on-hover-header .nav .nav-list .nav-list-item:hover > a {
+  color: #000;
+  background-color: #fff;
+}
+
+#dropdown-on-hover-header .nav .menu-button {
+  display: block;
+  margin: 0 0 0 auto;
+  height: 30px;
+  padding: 25px 15px;
+  background-color: gray;
+  border: 1px solid #000;
+}
+
+@media screen and (min-width: 600px) {
+  #dropdown-on-hover-header .nav .menu-button {
+    display: none !important;
+  }
+}
+
+#dropdown-on-hover-header .nav .menu-button .menu-bar {
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: #E1E2E7;
+  top: 0;
+  position: relative;
+}
+
+#dropdown-on-hover-header .nav .menu-button .menu-bar:before {
+  content: "";
+  position: absolute;
+  transition: all 100ms ease;
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: #E1E2E7;
+  top: -10px;
+}
+
+#dropdown-on-hover-header .nav .menu-button .menu-bar:after {
+  content: "";
+  position: absolute;
+  transition: all 100ms ease;
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: #E1E2E7;
+  top: 10px;
+}
+
+#dropdown-on-hover-header .nav .nav-list-mobile {
+  visibility: hidden;
+  width: 100%;
+  font-size: 1.8rem;
+  height: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  margin: 0;
+  transition: all 100ms ease;
+}
+
+#dropdown-on-hover-header .nav .nav-list-mobile .dropdown-nav-list-item-mobile {
+  margin-bottom: 1em;
+}
+
+#dropdown-on-hover-header .nav .nav-list-mobile .dropdown-nav-list-item-mobile:last-child {
+  margin-bottom: 0;
+}
+
+#dropdown-on-hover-header .nav .nav-list-mobile .dropdown-nav-list-item-mobile a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+
+#dropdown-on-hover-header .nav .nav-list-mobile .dropdown-nav-list-item-mobile .menu-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  padding: 8px 0;
+}
+
+#dropdown-on-hover-header .nav .nav-list-mobile .dropdown-nav-list-item-mobile .menu-title .plus-bar {
+  display: inline-block;
+  position: relative;
+  width: 12px;
+  height: 2px;
+  margin-right: 4px;
+  background-color: #fff;
+}
+
+#dropdown-on-hover-header .nav .nav-list-mobile .dropdown-nav-list-item-mobile .menu-title .plus-bar:before {
+  content: "";
+  position: absolute;
+  transition: all 100ms ease;
+  transform: rotate(90deg);
+  display: inline-block;
+  width: 12px;
+  height: 2px;
+  margin-right: 4px;
+  background-color: #fff;
+}
+
+#dropdown-on-hover-header .nav .nav-list-mobile .dropdown-nav-list-item-mobile .dropdown {
+  visibility: hidden;
+  height: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  font-size: 1.4rem;
+  padding-left: 1em;
+  transition: all 100ms ease;
+}
+
+#dropdown-on-hover-header .nav .nav-list-mobile .dropdown-nav-list-item-mobile .dropdown .dropdown-item {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid gray;
+}
+
+#dropdown-on-hover-header .nav .nav-list-mobile .dropdown-nav-list-item-mobile.is-opened .dropdown {
+  visibility: visible;
+  height: auto;
+  transform: scaleY(1);
+}
+
+#dropdown-on-hover-header .nav .nav-list-mobile .dropdown-nav-list-item-mobile.is-opened .menu-title .plus-bar:before {
+  transform: rotate(0deg);
+  transition: all 100ms ease;
+}
+
+@media screen and (min-width: 600px) {
+  #dropdown-on-hover-header .nav .nav-list-mobile {
+    display: none !important;
+  }
+}
+
+#dropdown-on-hover-header .nav.is-opened .menu-button .menu-bar {
+  background-color: transparent;
+}
+
+#dropdown-on-hover-header .nav.is-opened .menu-button .menu-bar:before {
+  transform: rotate(45deg) translate(7px, 7px);
+  transition: all 100ms ease;
+}
+
+#dropdown-on-hover-header .nav.is-opened .menu-button .menu-bar:after {
+  transform: rotate(-45deg) translate(7px, -7px);
+  transition: all 100ms ease;
+}
+
+#dropdown-on-hover-header .nav.is-opened .nav-list-mobile {
+  visibility: visible;
+  height: auto;
+  transform: scaleY(1);
+  margin: 2em 0;
 }
